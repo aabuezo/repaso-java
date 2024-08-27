@@ -16,14 +16,14 @@ class Clinico extends Medico {
 
 public class EjemploReflectionHerencia {
     public static void main(String[] args) {
-        Clinico drClinico = new Clinico();
+        Clinico dr = new Clinico();
 
-        Class dr = drClinico.getClass();
-        while (dr.getSuperclass() != null) {
-            String claseHija = dr.getName();
-            String clasePadre = dr.getSuperclass().getName();
+        Class clase = dr.getClass();
+        while (clase.getSuperclass() != null) {
+            String claseHija = clase.getName();
+            String clasePadre = clase.getSuperclass().getName();
             System.out.println(claseHija + " es hija de " + clasePadre);
-            dr = dr.getSuperclass();
+            clase = clase.getSuperclass();
         }
     }
 }
